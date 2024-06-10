@@ -4,7 +4,7 @@ from datetime import datetime
 import pandas as pd
 import streamlit as st
 
-from utils import calculate_ship2
+from utils import calculate_ship
 
 # Set page config
 st.set_page_config(layout="wide")
