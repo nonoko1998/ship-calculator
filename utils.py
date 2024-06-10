@@ -69,8 +69,9 @@ def calculate_ship2(matrix):
                 neighbors.append(matrix[i, j + 1])
 
             # 隣接 patch との差の2乗和を計算
-            for neighbor in neighbors:
-                diff_matrix[i, j] += (a_ij - neighbor) ** 2
+            if neighbors:  # 隣接する有効なピクセルが存在する場合のみ計算
+                for neighbor in neighbors:
+                    diff_matrix[i, j] += (a_ij - neighbor) ** 2
 
     # SHIPを計算
     valid_patch_count = np.sum(~np.isnan(matrix))  # 欠損値を含まないパッチ数
