@@ -1,7 +1,7 @@
 import numpy as np
 
 
-def calculate_ship(
+def calculate_ship2(
         matrix: np.ndarray
 ) -> tuple[float, np.ndarray]:
     """Calculate SHIP.
@@ -45,7 +45,7 @@ def calculate_ship(
     return ship, diff_matrix
 
 
-def calculate_ship2(matrix):
+def calculate_ship(matrix):
     rows, cols = matrix.shape
     N = rows * cols  # すべての patch 数
     diff_matrix = np.zeros((rows, cols))  # 隣接 patch との差の2乗和を格納する行列
